@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SKYLINE ACADEMY — Learn Beyond Limits · A universe of courses and pathways</title>
+<meta name="description" content="Skyline Academy maps learning as a universe: six subject constellations, thirty-six sample courses and four pathways you can light up as routes across the sky.">
+<meta name="theme-color" content="#0A1230">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://skyline-academy-omega.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SKYLINE ACADEMY">
+<meta property="og:title" content="SKYLINE ACADEMY — Learn Beyond Limits">
+<meta property="og:description" content="Fly between subject constellations, open courses and light a pathway as a route through the stars.">
+<meta property="og:url" content="https://skyline-academy-omega.vercel.app/">
+<meta property="og:image" content="https://skyline-academy-omega.vercel.app/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SKYLINE ACADEMY — Learn Beyond Limits">
+<meta name="twitter:description" content="A learning universe: subjects as constellations, courses as stars, pathways as routes.">
+<meta name="twitter:image" content="https://skyline-academy-omega.vercel.app/og.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&amp;family=Saira:wght@300;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js" } }</script>
+<script>document.documentElement.classList.replace('no-js', 'js');</script>
+<script type="module" src="main.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" class="defs" aria-hidden="true" focusable="false">
+  <symbol id="mark" viewBox="0 0 48 48">
+    <path d="M6 38a26 26 0 0 1 36 0" fill="none" stroke="#7CC4FF" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M12 30L21 21L28 25L38 10" fill="none" stroke="#F4F7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="12" cy="30" r="2.6" fill="#F4F7FF"/>
+    <circle cx="21" cy="21" r="2.2" fill="#7CC4FF"/>
+    <circle cx="28" cy="25" r="2.2" fill="#7CC4FF"/>
+    <path d="M38 5.5l1.4 3.1 3.1 1.4-3.1 1.4L38 14.5l-1.4-3.1-3.1-1.4 3.1-1.4z" fill="#FF7A59"/>
+  </symbol>
+</svg>
+
+<header class="hdr" id="top">
+  <a class="brand" href="#universe" aria-label="Skyline Academy — back to the universe">
+    <svg class="brand-mark" aria-hidden="true" focusable="false"><use href="#mark"/></svg>
+    <span class="brand-word" aria-hidden="true">Skyline<span>Academy</span></span>
+  </a>
+  <nav class="nav" id="nav" aria-label="Primary">
+    <ul>
+      <li><a href="#universe">Universe</a></li>
+      <li><a href="#subjects">Subjects</a></li>
+      <li><a href="#pathways">Pathways</a></li>
+      <li><a href="#method">Method</a></li>
+      <li><a href="#log">Flight log</a></li>
+      <li><a href="#apply" class="nav-cta">Request a prospectus</a></li>
+    </ul>
+  </nav>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="menu-ico" aria-hidden="true"><i></i><i></i></span><span class="menu-label">Menu</span></button>
+</header>
+
+<main id="main" tabindex="-1">
+
+<!-- ============================================================ UNIVERSE -->
+<section class="hero" id="universe" aria-labelledby="hero-title">
+  <div class="sky" id="sky">
+    <canvas class="sky-canvas" id="sky-canvas" aria-hidden="true"></canvas>
+    <div class="sky-fallback" id="sky-fallback"></div>
+    <div class="sky-labels" id="sky-labels"></div>
+    <div class="sky-vignette" aria-hidden="true"></div>
+  </div>
+
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="pulse" aria-hidden="true"></span>Online learning universe · sample catalogue</p>
+    <h1 id="hero-title" class="hero-title">Learn beyond <em>limits.</em></h1>
+    <p class="lede">Every subject is a constellation and every course a star. Fly between them, open a course, or light a pathway and watch the route it draws across the sky.</p>
+    <div class="hero-ctas">
+      <button class="btn btn-coral" type="button" data-tour aria-pressed="false"><span class="btn-ico" aria-hidden="true">▶</span><span data-tour-label>Take the guided flight</span></button>
+      <a class="btn btn-ghost" href="#pathways">Compare pathways</a>
+    </div>
+  </div>
+
+  <nav class="rail" aria-label="Constellations">
+    <p class="rail-title" aria-hidden="true">Constellations<span>Drag to look around · click a star · ← → to switch · Esc to go back</span></p>
+    <ul>
+      <li><button type="button" data-subject="science" aria-pressed="false" style="--c:#7CC4FF"><i aria-hidden="true"></i>Science</button></li>
+      <li><button type="button" data-subject="technology" aria-pressed="false" style="--c:#59D6E8"><i aria-hidden="true"></i>Technology</button></li>
+      <li><button type="button" data-subject="design" aria-pressed="false" style="--c:#FF7A59"><i aria-hidden="true"></i>Design</button></li>
+      <li><button type="button" data-subject="business" aria-pressed="false" style="--c:#FFB59E"><i aria-hidden="true"></i>Business</button></li>
+      <li><button type="button" data-subject="humanities" aria-pressed="false" style="--c:#CFE8FF"><i aria-hidden="true"></i>Humanities</button></li>
+      <li><button type="button" data-subject="languages" aria-pressed="false" style="--c:#9DB2FF"><i aria-hidden="true"></i>Languages</button></li>
+    </ul>
+    <button type="button" class="rail-home" data-home>Recentre</button>
+  </nav>
+
+  <aside class="dock" id="dock" aria-label="Course panel">
+    <div class="dock-head">
+      <p class="dock-crumbs" data-crumbs>Universe</p>
+      <p class="dock-tag">Sample catalogue</p>
+    </div>
+    <div class="dock-body" id="dock-body" tabindex="-1">
+      <p class="dk-eyebrow">The universe</p>
+      <h2 class="dk-title">Six constellations</h2>
+      <p class="dk-text">Science, Technology, Design, Business, Humanities and Languages, with thirty-six sample courses and four pathways that cross between them.</p>
+      <noscript><p class="dk-text">The interactive universe needs JavaScript. You can still read about every subject and pathway further down the page.</p></noscript>
+    </div>
+    <p class="dock-note">Courses, durations and pathways are illustrative sample content.</p>
+  </aside>
+</section>
+
+<!-- ============================================================ SUBJECTS -->
+<section class="subjects" id="subjects" aria-labelledby="sub-title">
+  <header class="sec-head">
+    <p class="kicker"><span>02</span>Subjects</p>
+    <h2 id="sub-title" class="sec-title">Six constellations, one sky.</h2>
+    <p class="sec-lede">Each subject is taught as its own figure of courses, from foundation stars to advanced ones. Pick one to fly straight to it.</p>
+  </header>
+  <ol class="index">
+    <li class="ix-row" style="--c:#7CC4FF"><span class="ix-n" aria-hidden="true">01</span><h3 class="ix-name">Science</h3><p class="ix-blurb">How the physical world works, from atoms to climate, taught through observation and small experiments.</p><p class="ix-meta">6 courses<br>RA 02h 14m</p><svg class="ix-glyph" data-glyph="science" viewBox="-6 -5 12 10" aria-hidden="true" focusable="false"></svg><button class="ix-go" type="button" data-fly="science">Fly to Science <span aria-hidden="true">↗</span></button></li>
+    <li class="ix-row" style="--c:#59D6E8"><span class="ix-n" aria-hidden="true">02</span><h3 class="ix-name">Technology</h3><p class="ix-blurb">Programming, data and the systems behind the internet, for people who want to build things that work.</p><p class="ix-meta">6 courses<br>RA 07h 40m</p><svg class="ix-glyph" data-glyph="technology" viewBox="-6 -5 12 10" aria-hidden="true" focusable="false"></svg><button class="ix-go" type="button" data-fly="technology">Fly to Technology <span aria-hidden="true">↗</span></button></li>
+    <li class="ix-row" style="--c:#FF7A59"><span class="ix-n" aria-hidden="true">03</span><h3 class="ix-name">Design</h3><p class="ix-blurb">Visual, interaction and information design, practised through briefs, critique and iteration.</p><p class="ix-meta">6 courses<br>RA 11h 05m</p><svg class="ix-glyph" data-glyph="design" viewBox="-6 -5 12 10" aria-hidden="true" focusable="false"></svg><button class="ix-go" type="button" data-fly="design">Fly to Design <span aria-hidden="true">↗</span></button></li>
+    <li class="ix-row" style="--c:#FFB59E"><span class="ix-n" aria-hidden="true">04</span><h3 class="ix-name">Business</h3><p class="ix-blurb">How organisations make, sell and grow — with projects you could run on Monday morning.</p><p class="ix-meta">6 courses<br>RA 15h 32m</p><svg class="ix-glyph" data-glyph="business" viewBox="-6 -5 12 10" aria-hidden="true" focusable="false"></svg><button class="ix-go" type="button" data-fly="business">Fly to Business <span aria-hidden="true">↗</span></button></li>
+    <li class="ix-row" style="--c:#CFE8FF"><span class="ix-n" aria-hidden="true">05</span><h3 class="ix-name">Humanities</h3><p class="ix-blurb">Reasoning, writing and the history of ideas — the skills that make every other subject sharper.</p><p class="ix-meta">6 courses<br>RA 19h 48m</p><svg class="ix-glyph" data-glyph="humanities" viewBox="-6 -5 12 10" aria-hidden="true" focusable="false"></svg><button class="ix-go" type="button" data-fly="humanities">Fly to Humanities <span aria-hidden="true">↗</span></button></li>
+    <li class="ix-row" style="--c:#9DB2FF"><span class="ix-n" aria-hidden="true">06</span><h3 class="ix-name">Languages</h3><p class="ix-blurb">Speak, read and translate, with live conversation practice from the very first week.</p><p class="ix-meta">6 courses<br>RA 23h 10m</p><svg class="ix-glyph" data-glyph="languages" viewBox="-6 -5 12 10" aria-hidden="true" focusable="false"></svg><button class="ix-go" type="button" data-fly="languages">Fly to Languages <span aria-hidden="true">↗</span></button></li>
+  </ol>
+</section>
+
+<!-- ============================================================ PATHWAYS -->
+<section class="pathways" id="pathways" aria-labelledby="pw-title">
+  <header class="sec-head">
+    <p class="kicker"><span>03</span>Pathways</p>
+    <h2 id="pw-title" class="sec-title">Routes that cross the sky.</h2>
+    <p class="sec-lede">A pathway is a guided route through courses from different constellations, ordered so each one prepares you for the next. Durations are sample estimates.</p>
+  </header>
+  <div class="pw-tabs" role="tablist" aria-label="Pathways">
+    <button type="button" role="tab" id="tab-data-storyteller" data-path="data-storyteller" aria-selected="true" aria-controls="pw-panel">Data Storyteller</button>
+    <button type="button" role="tab" id="tab-product-builder" data-path="product-builder" aria-selected="false" aria-controls="pw-panel" tabindex="-1">Product Builder</button>
+    <button type="button" role="tab" id="tab-climate-analyst" data-path="climate-analyst" aria-selected="false" aria-controls="pw-panel" tabindex="-1">Climate Analyst</button>
+    <button type="button" role="tab" id="tab-global-communicator" data-path="global-communicator" aria-selected="false" aria-controls="pw-panel" tabindex="-1">Global Communicator</button>
+  </div>
+  <div class="pw-panel" id="pw-panel" role="tabpanel" aria-labelledby="tab-data-storyteller" tabindex="0">
+    <div class="metro" id="metro"></div>
+    <div class="pw-info">
+      <div>
+        <h3 class="pw-name" data-pw="name">Data Storyteller</h3>
+        <p class="pw-blurb" data-pw="blurb">Collect evidence, analyse it in code and present it so people act on it.</p>
+        <p class="pw-who" data-pw="who">For analysts, researchers and journalists who want their numbers to land.</p>
+      </div>
+      <dl class="pw-facts">
+        <div><dt>Duration</dt><dd data-pw="months">Around 9 months part-time</dd></div>
+        <div><dt>Courses</dt><dd data-pw="count">6</dd></div>
+        <div><dt>Constellations crossed</dt><dd data-pw="subjects">Science, Technology, Design, Humanities</dd></div>
+      </dl>
+      <button class="btn btn-coral" type="button" data-light><span class="btn-ico" aria-hidden="true">✦</span>Light this route in the universe</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ METHOD -->
+<section class="method" id="method" aria-labelledby="me-title">
+  <div class="method-track">
+    <div class="method-stage">
+      <header class="sec-head method-head">
+        <p class="kicker"><span>04</span>Method</p>
+        <h2 id="me-title" class="sec-title">From orbit to arrival.</h2>
+      </header>
+      <div class="orbit-wrap" aria-hidden="true">
+        <svg class="orbits" viewBox="-300 -300 600 600" focusable="false">
+          <defs>
+            <radialGradient id="sun"><stop offset="0" stop-color="#F4F7FF"/><stop offset=".35" stop-color="#7CC4FF" stop-opacity=".7"/><stop offset="1" stop-color="#7CC4FF" stop-opacity="0"/></radialGradient>
+          </defs>
+          <circle r="60" fill="url(#sun)"/>
+          <circle class="ring r1" r="80"/><circle class="ring r2" r="140"/><circle class="ring r3" r="200"/><circle class="ring r4" r="260"/>
+          <g class="ring-tags">
+            <text x="0" y="-86">I · ORBIT</text><text x="0" y="-146">II · LAUNCH</text><text x="0" y="-206">III · NAVIGATE</text><text x="0" y="-266">IV · ARRIVE</text>
+          </g>
+          <circle class="moon m1" cx="80" cy="0" r="7"/><circle class="moon m2" cx="-99" cy="99" r="8"/><circle class="moon m3" cx="141" cy="-141" r="9"/><circle class="moon m4" cx="-184" cy="-184" r="10"/>
+          <path class="trail-bg" id="trail-bg" d=""/>
+          <path class="trail" id="trail" d=""/>
+          <g class="craft" id="craft"><circle r="16" class="craft-glow"/><path d="M-7 6L0 -10L7 6L0 2Z" class="craft-body"/></g>
+        </svg>
+      </div>
+      <ol class="phases">
+        <li class="phase is-on" data-i="0"><p class="ph-n">I</p><h3>Orbit</h3><p>Explore before you commit. Every course opens with free sample lessons, so you can circle a few constellations and see what pulls you in.</p></li>
+        <li class="phase" data-i="1"><p class="ph-n">II</p><h3>Launch</h3><p>Start with a small cohort on a set date. Foundations come first, with a weekly live seminar and short exercises you can fit around work.</p></li>
+        <li class="phase" data-i="2"><p class="ph-n">III</p><h3>Navigate</h3><p>Every course ends in a project reviewed by a mentor. You get written feedback, a second attempt if you want it, and a clear sense of what to learn next.</p></li>
+        <li class="phase" data-i="3"><p class="ph-n">IV</p><h3>Arrive</h3><p>Pathways finish with a capstone that pulls everything together — a piece of work you can show to an employer, a client or yourself.</p></li>
+      </ol>
+      <div class="method-bar" aria-hidden="true"><i></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ FLIGHT LOG -->
+<section class="log" id="log" aria-labelledby="log-title">
+  <header class="sec-head">
+    <p class="kicker"><span>05</span>Flight log</p>
+    <h2 id="log-title" class="sec-title">Your progress, kept in this tab.</h2>
+    <p class="sec-lede">Mark courses as completed in the universe and they appear here. This is a demo: nothing is tracked, sent or stored beyond this browser tab.</p>
+  </header>
+  <div class="log-grid">
+    <dl class="log-stats">
+      <div><dt>Courses completed</dt><dd><b data-log="done">0</b><span>of 36</span></dd></div>
+      <div><dt>Study hours in those courses</dt><dd><b data-log="hours">0</b><span>sample estimate</span></dd></div>
+      <div><dt>Pathways started</dt><dd><b data-log="paths">0</b><span>of 4</span></dd></div>
+    </dl>
+    <div class="log-paths">
+      <h3 class="log-h">Pathway progress</h3>
+      <ul data-log="pathlist"></ul>
+    </div>
+    <div class="log-list">
+      <h3 class="log-h">Completed courses</h3>
+      <ul data-log="list"></ul>
+      <p class="log-empty" data-log="empty">Your log is empty. Open any course in the universe and press <b>Mark as completed</b>, or try a quick demo.</p>
+      <div class="log-acts">
+        <button class="btn btn-ghost" type="button" data-demo>Fill with a sample learner</button>
+        <button class="btn btn-quiet" type="button" data-reset>Reset demo progress</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ APPLY -->
+<section class="apply" id="apply" aria-labelledby="ap-title">
+  <div class="ap-copy">
+    <p class="kicker"><span>06</span>Prospectus</p>
+    <h2 id="ap-title" class="sec-title">Plot your first course.</h2>
+    <p class="sec-lede">Tell us where you would like to start and we will put together a prospectus for that constellation or pathway, with sample timetables and start dates.</p>
+    <ul class="ap-points">
+      <li>Part-time, online, with live seminars</li>
+      <li>Start in January, April or September</li>
+      <li>Change pathway at any point</li>
+    </ul>
+  </div>
+  <form class="ap-form" id="apply-form" novalidate>
+    <p class="ap-demo">Portfolio demo — nothing you enter is sent or stored.</p>
+    <div class="field"><label for="ap-name">Full name</label><input id="ap-name" name="name" type="text" autocomplete="name" required aria-describedby="ap-name-err"><p class="err" id="ap-name-err" hidden></p></div>
+    <div class="field"><label for="ap-email">Email</label><input id="ap-email" name="email" type="email" autocomplete="email" required aria-describedby="ap-email-err"><p class="err" id="ap-email-err" hidden></p></div>
+    <div class="field-row">
+      <div class="field"><label for="ap-subject">Constellation</label>
+        <select id="ap-subject" name="subject" required aria-describedby="ap-subject-err">
+          <option value="">Choose a subject</option><option>Science</option><option>Technology</option><option>Design</option><option>Business</option><option>Humanities</option><option>Languages</option>
+        </select><p class="err" id="ap-subject-err" hidden></p></div>
+      <div class="field"><label for="ap-path">Pathway <span class="opt">(optional)</span></label>
+        <select id="ap-path" name="path">
+          <option value="">Not sure yet</option><option>Data Storyteller</option><option>Product Builder</option><option>Climate Analyst</option><option>Global Communicator</option>
+        </select></div>
+    </div>
+    <fieldset class="field seg" aria-describedby="ap-term-err">
+      <legend>Preferred start</legend>
+      <label><input type="radio" name="term" value="January"><span>January</span></label>
+      <label><input type="radio" name="term" value="April"><span>April</span></label>
+      <label><input type="radio" name="term" value="September"><span>September</span></label>
+      <p class="err" id="ap-term-err" hidden></p>
+    </fieldset>
+    <div class="field"><label for="ap-pace">Time you can give each week</label>
+      <select id="ap-pace" name="pace"><option>3–5 hours</option><option selected>6–8 hours</option><option>9 hours or more</option></select></div>
+    <button class="btn btn-coral btn-big" type="submit"><span class="btn-ico" aria-hidden="true">✦</span>Request my prospectus</button>
+    <div class="ap-done" id="ap-done" role="status" tabindex="-1" hidden></div>
+  </form>
+</section>
+
+</main>
+
+<footer class="ftr">
+  <div class="ftr-sky" aria-hidden="true"></div>
+  <div class="ftr-grid">
+    <div class="ftr-brand">
+      <svg class="ftr-mark" aria-hidden="true" focusable="false"><use href="#mark"/></svg>
+      <p class="ftr-name">Skyline Academy</p>
+      <p class="ftr-line">Learn beyond limits.</p>
+    </div>
+    <nav class="ftr-nav" aria-label="Footer">
+      <ul>
+        <li><a href="#universe">Universe</a></li>
+        <li><a href="#subjects">Subjects</a></li>
+        <li><a href="#pathways">Pathways</a></li>
+        <li><a href="#method">Method</a></li>
+        <li><a href="#log">Flight log</a></li>
+        <li><a href="#apply">Request a prospectus</a></li>
+      </ul>
+    </nav>
+    <div class="credit">
+      <p class="credit-k">Mission credits</p>
+      <p class="credit-by">Designed &amp; built by <a href="https://www.linkedin.com/in/saadbashirmarketing/" target="_blank" rel="noopener" aria-label="Saad Bashir on LinkedIn (opens in a new tab)">Saad Bashir</a></p>
+      <p class="credit-note">Fictional concept brand — portfolio project.</p>
+      <a class="credit-more" href="https://saadbashirportfolio.vercel.app/websites.html">More work <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+  <p class="ftr-fine">Skyline Academy is fictional. Subjects, courses, durations, pathways and progress are sample content for a portfolio concept; no qualification or outcome is implied.</p>
+</footer>
+</body>
+</html>
